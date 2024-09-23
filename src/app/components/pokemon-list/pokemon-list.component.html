@@ -1,0 +1,11 @@
+
+<div>
+  <input [(ngModel)]="searchQuery" placeholder="Search Pokémon" />
+  <button (click)="searchPokemon()">Search</button>
+</div>
+<ul>
+  <li *ngFor="let pokemon of pokemonList" (click)="viewDetails(pokemon.name)">
+    {{ pokemon.name | titlecase }}
+  </li>
+</ul>
+<button (click)="loadMore()">Load More</button>
